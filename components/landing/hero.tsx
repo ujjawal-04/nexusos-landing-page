@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LOGIN_URL, REGISTER_URL } from "./links";
 import { ArrowRight } from "lucide-react";
 import { Backdrop } from "./background-beams";
 import { CommandBar, LiveFeed } from "./hero-live";
@@ -54,14 +55,14 @@ export function Hero() {
 
           <div className="fade-up mt-9 flex flex-col gap-3 sm:flex-row" style={delay("0.9s")}>
             <Link
-              href="/register"
+              href={REGISTER_URL}
               data-magnetic
               className="btn-primary inline-flex h-12 items-center justify-center gap-2 rounded-xl px-6 text-[15px] font-medium"
             >
               Create a workspace <ArrowRight className="size-4" />
             </Link>
             <Link
-              href="/login"
+              href={LOGIN_URL}
               data-magnetic
               className="inline-flex h-12 items-center justify-center rounded-xl border border-card bg-surface px-6 text-[15px] font-medium text-ink shadow-sm transition-colors hover:bg-surface-2 dark:bg-white/[0.04] dark:shadow-none dark:hover:bg-white/10"
             >
