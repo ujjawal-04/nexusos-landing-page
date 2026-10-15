@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { LOGIN_URL, REGISTER_URL } from "./links";
 import { ArrowRight, Menu, Moon, Sun, X } from "lucide-react";
 import { LogoMark } from "./logo";
 
@@ -57,13 +58,13 @@ export function Navbar() {
             <Moon className="size-[18px] dark:hidden" />
           </button>
           <Link
-            href="/login"
+            href={LOGIN_URL}
             className="hidden rounded-lg px-3 py-2 text-sm font-medium text-muted transition-colors hover:text-ink sm:block"
           >
             Log in
           </Link>
           <Link
-            href="/register"
+            href={REGISTER_URL}
             className="btn-primary hidden items-center gap-1.5 rounded-xl px-4 py-2 text-sm font-medium sm:inline-flex"
           >
             Create a workspace
@@ -97,10 +98,10 @@ export function Navbar() {
             </a>
           ))}
           <div className="mt-2 grid grid-cols-2 gap-2 border-t border-line p-2 pt-3">
-            <Link href="/login" className="rounded-xl border border-card px-4 py-2.5 text-center text-sm font-medium text-ink">
+            <Link href={LOGIN_URL} className="rounded-xl border border-card px-4 py-2.5 text-center text-sm font-medium text-ink">
               Log in
             </Link>
-            <Link href="/register" className="btn-primary inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-sm font-medium">
+            <Link href={REGISTER_URL} className="btn-primary inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2.5 text-sm font-medium">
               Get started <ArrowRight className="size-4" />
             </Link>
           </div>

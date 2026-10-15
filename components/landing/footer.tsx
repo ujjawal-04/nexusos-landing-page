@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LOGIN_URL, REGISTER_URL } from "./links";
 import { Logo } from "./logo";
 
 const columns = [
@@ -18,8 +19,8 @@ const columns = [
   {
     title: "Account",
     links: [
-      { label: "Create a workspace", href: "/register" },
-      { label: "Log in", href: "/login" },
+      { label: "Create a workspace", href: REGISTER_URL },
+      { label: "Log in", href: LOGIN_URL },
     ],
   },
 ];

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LOGIN_URL, REGISTER_URL } from "./links";
 import { ArrowRight } from "lucide-react";
 import { Backdrop } from "./background-beams";
 
@@ -22,14 +23,14 @@ export function FinalCta() {
           </p>
           <div data-reveal="0.2" className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
-              href="/register"
+              href={REGISTER_URL}
               data-magnetic
               className="btn-primary inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl px-6 text-[15px] font-medium sm:w-auto"
             >
               Create a workspace <ArrowRight className="size-4" />
             </Link>
             <Link
-              href="/login"
+              href={LOGIN_URL}
               data-magnetic
               className="glass inline-flex h-12 w-full items-center justify-center rounded-xl px-6 text-[15px] font-medium text-white/90 transition-colors hover:bg-white/10 sm:w-auto"
             >
